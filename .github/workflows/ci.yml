@@ -17,4 +17,4 @@ jobs:
       - name: Run a simple check
         run: |
           echo "CI pipeline is running"
-          ls_not_a_command
+          ls -la
