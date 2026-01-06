@@ -7,14 +7,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  docker-build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run a simple check
+      - name: Build Docker image
         run: |
-          echo "CI pipeline is running"
-          ls -la
+          docker build -t my-nginx-app .
